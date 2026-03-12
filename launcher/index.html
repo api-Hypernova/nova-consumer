@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="NOVA">
+  <link rel="apple-touch-icon" href="icon.jpg">
+  <link rel="icon" href="icon.jpg">
+  <title>NOVA</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(135deg, #0a1628 0%, #1a2d50 50%, #0d1f3c 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+    .container {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .icon {
+      width: 120px;
+      height: 120px;
+      border-radius: 27px;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: 2px;
+    }
+    .tagline {
+      font-size: 14px;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 40px;
+    }
+    .launch-btn {
+      display: inline-block;
+      padding: 16px 48px;
+      background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+      color: white;
+      font-size: 18px;
+      font-weight: 600;
+      border-radius: 14px;
+      text-decoration: none;
+      box-shadow: 0 4px 16px rgba(59,130,246,0.4);
+      transition: transform 0.1s;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .launch-btn:active { transform: scale(0.96); }
+    .status { margin-top: 32px; font-size: 12px; color: rgba(255,255,255,0.4); }
+    .spinner {
+      display: none;
+      width: 24px;
+      height: 24px;
+      border: 3px solid rgba(255,255,255,0.2);
+      border-top-color: white;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin: 20px auto 0;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="icon.jpg" alt="NOVA" class="icon">
+    <h1>NOVA</h1>
+    <p class="tagline">Hair &amp; Beauty Booking</p>
+    <a href="#" class="launch-btn" id="launchBtn">Open App</a>
+    <div class="spinner" id="spinner"></div>
+    <p class="status" id="status"></p>
+  </div>
+  <script>
+    var EXPO_URL = "exp://ntnd1_g-anonymous-8082.exp.direct";
+
+    document.getElementById("launchBtn").addEventListener("click", function(e) {
+      e.preventDefault();
+      document.getElementById("spinner").style.display = "block";
+      document.getElementById("status").textContent = "Launching NOVA...";
+      window.location.href = EXPO_URL;
+      setTimeout(function() {
+        document.getElementById("spinner").style.display = "none";
+        document.getElementById("status").textContent = "If the app didn't open, install Expo Go from the App Store.";
+      }, 2500);
+    });
+
+    if (window.navigator.standalone) {
+      window.location.href = EXPO_URL;
+    }
+  </script>
+</body>
+</html>
