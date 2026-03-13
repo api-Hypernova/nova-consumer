@@ -83,7 +83,7 @@
     <p class="status" id="status"></p>
   </div>
   <script>
-    var TUNNEL_API = "https://ec2-18-225-30-85.us-east-2.compute.amazonaws.com/nova-tunnel";
+    var TUNNEL_API = "https://api-hypernova.github.io/nova-consumer/tunnel.json";
     var EXPO_URL = null;
 
     function launchApp() {
@@ -94,17 +94,10 @@
 
     function fetchTunnelUrl() {
       document.getElementById("status").textContent = "Connecting...";
-      fetch(TUNNEL_API)
+      fetch(TUNNEL_API + "?t=" + Date.now())
         .then(function(r) { return r.json(); })
         .then(function(data) {
-          var httpsUrl = "";
-          for (var i = 0; i < data.tunnels.length; i++) {
-            if (data.tunnels[i].proto === "https") {
-              httpsUrl = data.tunnels[i].public_url;
-              break;
-            }
-          }
-          EXPO_URL = "exp://" + httpsUrl.replace("https://", "");
+          EXPO_URL = data.url;
           document.getElementById("status").textContent = "";
           document.getElementById("launchBtn").style.opacity = "1";
           document.getElementById("launchBtn").style.pointerEvents = "auto";
