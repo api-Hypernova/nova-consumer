@@ -83,22 +83,56 @@
     <p class="status" id="status"></p>
   </div>
   <script>
-    var EXPO_URL = "exp://ntnd1_g-anonymous-8082.exp.direct";
+    var TUNNEL_API = "https://ec2-18-225-30-85.us-east-2.compute.amazonaws.com/nova-tunnel";
+    var EXPO_URL = null;
+
+    function launchApp() {
+      if (EXPO_URL) {
+        window.location.href = EXPO_URL;
+      }
+    }
+
+    function fetchTunnelUrl() {
+      document.getElementById("status").textContent = "Connecting...";
+      fetch(TUNNEL_API)
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          var httpsUrl = "";
+          for (var i = 0; i < data.tunnels.length; i++) {
+            if (data.tunnels[i].proto === "https") {
+              httpsUrl = data.tunnels[i].public_url;
+              break;
+            }
+          }
+          EXPO_URL = "exp://" + httpsUrl.replace("https://", "");
+          document.getElementById("status").textContent = "";
+          document.getElementById("launchBtn").style.opacity = "1";
+          document.getElementById("launchBtn").style.pointerEvents = "auto";
+          if (window.navigator.standalone) {
+            launchApp();
+          }
+        })
+        .catch(function() {
+          document.getElementById("status").textContent = "Server is starting up, please wait...";
+          setTimeout(fetchTunnelUrl, 3000);
+        });
+    }
+
+    document.getElementById("launchBtn").style.opacity = "0.5";
+    document.getElementById("launchBtn").style.pointerEvents = "none";
 
     document.getElementById("launchBtn").addEventListener("click", function(e) {
       e.preventDefault();
       document.getElementById("spinner").style.display = "block";
       document.getElementById("status").textContent = "Launching NOVA...";
-      window.location.href = EXPO_URL;
+      launchApp();
       setTimeout(function() {
         document.getElementById("spinner").style.display = "none";
         document.getElementById("status").textContent = "If the app didn't open, install Expo Go from the App Store.";
       }, 2500);
     });
 
-    if (window.navigator.standalone) {
-      window.location.href = EXPO_URL;
-    }
+    fetchTunnelUrl();
   </script>
 </body>
 </html>
