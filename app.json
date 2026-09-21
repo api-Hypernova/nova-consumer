@@ -2,6 +2,7 @@
   "expo": {
     "name": "Nova User",
     "slug": "nova-user-expo",
+    "owner": "isaachartford",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -28,8 +29,15 @@
     },
     "plugins": [
       "expo-font",
-      "expo-location"
-    ]
+      "expo-location",
+      "@react-native-community/datetimepicker",
+      "expo-splash-screen",
+      "expo-status-bar"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "842cd8bf-3972-424c-a9df-0f86df6c2ee6"
+      }
+    }
   }
 }
-
