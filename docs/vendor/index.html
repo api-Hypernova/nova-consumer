@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="NOVA Business">
+  <meta name="apple-mobile-web-app-title" content="NOVA Enterprise">
   <link rel="apple-touch-icon" href="icon.jpg">
   <link rel="icon" href="icon.jpg">
-  <title>NOVA Business</title>
+  <title>NOVA Enterprise</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -76,7 +76,7 @@
 <body>
   <div class="container">
     <img src="icon.jpg" alt="NOVA" class="icon">
-    <h1>NOVA Business</h1>
+    <h1>NOVA Enterprise</h1>
     <p class="tagline">Salon &amp; Staff Management</p>
     <a href="#" class="launch-btn" id="launchBtn">Open App</a>
     <div class="spinner" id="spinner"></div>
@@ -119,7 +119,7 @@
     document.getElementById("launchBtn").addEventListener("click", function(e) {
       e.preventDefault();
       document.getElementById("spinner").style.display = "block";
-      document.getElementById("status").textContent = "Launching NOVA Business...";
+      document.getElementById("status").textContent = "Launching NOVA Enterprise...";
       launchApp();
       setTimeout(function() {
         document.getElementById("spinner").style.display = "none";
