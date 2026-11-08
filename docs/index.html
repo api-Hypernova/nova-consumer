@@ -88,7 +88,9 @@
 
     function launchApp() {
       if (EXPO_URL) {
-        window.location.href = EXPO_URL;
+        // SDK 58 launch flags: hide Expo Go's blue floating tools button and the first-run tips (this launch only)
+        var flags = "__expo_disable_fab=1&__expo_disable_onboarding=1";
+        window.location.href = EXPO_URL + (EXPO_URL.indexOf("?") === -1 ? "?" : "&") + flags;
       }
     }
 
