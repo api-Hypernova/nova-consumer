@@ -1,4 +1,5 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
+import {TText as Text} from '../../i18n';
 import React from 'react';
 import {BottamButton} from '../../components';
 import {SD} from '../../utils';

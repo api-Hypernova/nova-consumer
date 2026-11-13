@@ -35,6 +35,7 @@ export type ServiceCardProps = {
   cardContainerStyle?: ViewProps['style'];
   isPrimary: boolean;
   isSecondary: boolean;
+  amount?: string;
   location?: string;
   rating?: string;
   views?: string;
@@ -59,6 +60,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
   cardContainerStyle,
   isPrimary = false,
   isSecondary = false,
+  amount,
   location,
   rating,
   views,
@@ -86,7 +88,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
           cardContainerStyle,
         ]}>
         <CustomImage
-          source={cardImg || Images.facicalImg}
+          source={cardImg || source || Images.facicalImg}
           resizeMode="cover"
           style={[styles.image, imageStyle]}
         />
@@ -239,7 +241,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
                       marginTop: SD.hp(-15),
                     }}>
                     <Text medium size={14}>
-                      {'$100'}
+                      {amount || '$100'}
                     </Text>
 
                     <RoundIconComp

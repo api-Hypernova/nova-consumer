@@ -38,10 +38,10 @@ export const BookingCompleteScreen = () => {
             source={Images.novaLogo}
           />
           <Text size={30} bold topSpacing={15}>
-            Woodland Hills Salon
+            Atelier Lumen
           </Text>
           <Text regular size={16} topSpacing={15}>
-            Specialty Treatments - Consultation
+            Signature Cut & Style
           </Text>
         </View>
 
@@ -67,7 +67,7 @@ export const BookingCompleteScreen = () => {
             Your Booking has been confirmed
             </Text>
             <Text regular size={17} topSpacing={10}>
-            Your appointment for 6/23 is confirmed
+            Your appointment for Nov 19 at 10:00 AM is confirmed
             </Text>
           </View>
         </View>

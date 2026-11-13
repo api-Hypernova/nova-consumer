@@ -24,15 +24,15 @@ import {set} from 'lodash';
 const serviceData = [
   {
     id: '1',
-    title: 'Mike Spa',
-    location: '507 University St.Endicott, NY 13760',
+    title: 'Maison Verre',
+    location: '38 Willow Row, Marlowe Bay',
     rating: '4.2',
     views: '84',
   },
   {
     id: '2',
-    title: 'Elegant Hair Salon',
-    location: '123 Main St, New York, NY 10001',
+    title: 'Orchid & Oak',
+    location: '7 Harbor Plaza, Marlowe Bay',
     rating: '4.8',
     views: '120',
   },

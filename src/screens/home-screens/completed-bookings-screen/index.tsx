@@ -1,4 +1,5 @@
-import {FlatList, StyleSheet, Text, View} from 'react-native';
+import {FlatList, StyleSheet, View} from 'react-native';
+import {TText as Text} from '../../../i18n';
 import React from 'react';
 import {BackHeader, BookingCard, MainContainer} from '../../../components';
 import {SD} from '../../../utils';
@@ -8,21 +9,21 @@ import {HomeRoutes} from '../../../constants';
 const bookingData = [
   {
     id: '1',
-    salonName: 'Beauty Bliss',
+    salonName: 'Atelier Lumen',
     services: 'Haircut, Facial',
-    location: 'Downtown Avenue',
+    location: 'Larkspur Ave',
   },
   {
     id: '2',
-    salonName: 'Glow Spa',
-    services: 'Massage, Manicure',
-    location: 'Green Street',
+    salonName: 'Maison Verre',
+    services: 'Manicure, Gel Polish',
+    location: 'Willow Row',
   },
   {
     id: '3',
-    salonName: 'Elite Salon',
+    salonName: 'Orchid & Oak',
     services: 'Hair Color, Pedicure',
-    location: 'Oakwood Plaza',
+    location: 'Harbor Plaza',
   },
 ];
 

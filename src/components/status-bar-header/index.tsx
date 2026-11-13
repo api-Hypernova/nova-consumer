@@ -20,7 +20,7 @@ export const StatusBarHeader: React.FC<StatusBarHeaderProps> = ({
       <CardContainer
         onPress={() => NavigationService.goBack()}
         activeOpacity={0.6}>
-        <Image source={Images.Backbtn} style={styles.backImage} />
+        <CustomImage source={Images.Backbtn} style={styles.backImage} />
       </CardContainer>
 
       <View style={[styles.textAndIconContainer]}>

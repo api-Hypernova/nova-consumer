@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
-import { StyleSheet, View, PanResponder, Text } from 'react-native';
+import {StyleSheet, View, PanResponder} from 'react-native';
+import {TText as Text} from '../../i18n';
 
 export const CustomSlider: React.FC = () => {
   const [value, setValue] = useState(0); // Slider Value

@@ -41,9 +41,9 @@ export const PreviewBusinessDetails = () => {
 
   const businessData = [
     {id: '1', name: '9:00 am - 8:00 pm', image: Images.timer},
-    {id: '2', name: '+1 234 567890', image: Images.tablet},
+    {id: '2', name: '+1 555 0142', image: Images.tablet},
     {id: '3', name: 'In-Store & Home Service', image: Images.shop},
-    {id: '4', name: 'Shop 101, Hamilton Courts', image: Images.location},
+    {id: '4', name: '214 Larkspur Ave', image: Images.location},
   ];
 
   const profileCarddata = [

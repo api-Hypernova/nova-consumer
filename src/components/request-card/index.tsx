@@ -45,7 +45,7 @@ export const RequestCard: React.FC<{
 
       <View style={styles.textContainer}>
         <Text numberOfLines={1} size={14} bold>
-          {title || 'Sarah Burress'}
+          {title || 'Sofia Reyes'}
         </Text>
         <Text
           medium

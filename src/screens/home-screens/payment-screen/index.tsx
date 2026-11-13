@@ -41,10 +41,10 @@ export const PaymentScreen = () => {
   const paymentMethods = [
     {
       id: '2',
-      name: 'Master Card',
+      name: 'Credit Card',
       icon: Images.masterCardIcon,
     },
-    {id: '3', name: 'Visa Card', icon: Images.visaCardIcon},
+    {id: '3', name: 'Debit Card', icon: Images.visaCardIcon},
   ];
 
   const renderPaymentMethod = ({item}) => (
@@ -104,7 +104,7 @@ export const PaymentScreen = () => {
 
               <View style={{marginRight: 100}}>
                 <Text semiBold size={17}>
-                  Master Card
+                  Credit Card
                 </Text>
                 <Text medium size={16}>
                   **********0909

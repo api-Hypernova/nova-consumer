@@ -107,9 +107,9 @@ export const UpdateProfile = ({route}: any) => {
           <View>
             <Formik
               initialValues={{
-                name: '',
-                email: '',
-                password: '',
+                name: 'Avery Stone',
+                email: 'avery.stone@example.com',
+                password: 'password123',
               }}
               onSubmit={values => {}}>
               {({handleChange, handleSubmit, values}) => (

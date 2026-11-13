@@ -14,15 +14,15 @@ import {SD} from '../../../utils';
 const settingsData = [
   {
     id: '1',
-    title: 'Terms For Use',
+    title: 'Terms of Use',
     subText:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      'By using Nova you agree to book appointments in good faith, to arrive on time and to respect each salon’s cancellation window. Prices and durations are set by the salon and shown before you confirm. Payments are processed securely and you will receive a receipt for every booking.',
   },
   {
     id: '2',
-    title: 'Request Accepting/Rejecting',
+    title: 'Cancellations & Rescheduling',
     subText:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      'If a salon needs to reschedule or cancel, you will be notified straight away and offered the next available slot or a full refund. You can cancel free of charge up to 24 hours before your appointment unless the salon states otherwise.',
   },
 ];
 
@@ -35,7 +35,7 @@ export const LegalInfo = ({...props}) => {
       <CustomTouchable
         onPress={() => item.onPress && item.onPress()}
         style={styles.preferenceItem}>
-        <View>
+        <View style={{flex: 1}}>
           <Text color={AppTheme.Primary} size={17} bold>
             {item.title}
           </Text>

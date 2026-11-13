@@ -6,32 +6,32 @@ import {handleHaptictFeedback, SD} from '../../../utils';
 
 const pastBookingData = [
   {
-    title: 'August 2022',
+    title: 'August 2026',
     data: [
       {
         id: '1',
-        salonName: 'Beauty Bliss',
+        salonName: 'Atelier Lumen',
         services: 'Haircut, Facial',
-        location: 'Downtown Avenue',
+        location: 'Larkspur Ave',
         value: true,
       },
       {
         id: '2',
-        salonName: 'Glow Spa',
-        services: 'Massage, Manicure',
-        location: 'Green Street',
+        salonName: 'Maison Verre',
+        services: 'Manicure, Gel Polish',
+        location: 'Willow Row',
         value: true,
       },
     ],
   },
   {
-    title: 'September 2022',
+    title: 'September 2026',
     data: [
       {
         id: '3',
-        salonName: 'Elite Salon',
+        salonName: 'Orchid & Oak',
         services: 'Hair Color, Pedicure',
-        location: 'Oakwood Plaza',
+        location: 'Harbor Plaza',
         value: true,
       },
     ],
@@ -40,32 +40,32 @@ const pastBookingData = [
 
 const upcomingBookingData = [
   {
-    title: 'August 2022',
+    title: 'November 2026',
     data: [
       {
         id: '1',
-        salonName: 'Beauty Bliss',
+        salonName: 'Atelier Lumen',
         services: 'Haircut, Facial',
-        location: 'Downtown Avenue',
+        location: 'Larkspur Ave',
         value: false,
       },
       {
         id: '2',
-        salonName: 'Glow Spa',
-        services: 'Massage, Manicure',
-        location: 'Green Street',
+        salonName: 'Maison Verre',
+        services: 'Manicure, Gel Polish',
+        location: 'Willow Row',
         value: false,
       },
     ],
   },
   {
-    title: 'September 2022',
+    title: 'December 2026',
     data: [
       {
         id: '3',
-        salonName: 'Elite Salon',
+        salonName: 'Orchid & Oak',
         services: 'Hair Color, Pedicure',
-        location: 'Oakwood Plaza',
+        location: 'Harbor Plaza',
         value: false,
       },
     ],

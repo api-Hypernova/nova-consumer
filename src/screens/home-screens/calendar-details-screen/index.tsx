@@ -50,7 +50,7 @@ const dataArray = [
 export const CalendarDetailsScreen = () => {
   const {AppTheme} = useTheme();
   const [selected, setSelected] = useState<string>('');
-  const specialDate = '2024-12-17';
+  const specialDate = '2026-11-20';
 
   const [isModalVisible, setIsModalVisible] = useState(false);
 
@@ -91,7 +91,7 @@ export const CalendarDetailsScreen = () => {
           </Text>
           {selected === specialDate ? (
             <RequestCard
-              title="Sarah Burress"
+              title="Sofia Reyes"
               subTitle="has requested time off"
               onPress={() => {
                 setIsModalVisible(true);
@@ -142,7 +142,7 @@ export const CalendarDetailsScreen = () => {
 
               <View style={styles.textContainer}>
                 <Text size={19} bold>
-                  {'Sarah Burress'}
+                  {'Sofia Reyes'}
                 </Text>
                 <Text
                   medium
@@ -170,7 +170,7 @@ export const CalendarDetailsScreen = () => {
                       editable={false}
                       name="date"
                       label="Date"
-                      placeholder="17 - Oct - 2024"
+                      placeholder="20 - Nov - 2026"
                       mainContainerStyles={{
                         marginTop: SD.hp(10),
                       }}
@@ -208,7 +208,7 @@ export const CalendarDetailsScreen = () => {
                           medium
                           letterSpacing={0.5}>
                           {
-                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                            'Please use sulfate-free products. Sensitive scalp, so a gentle rinse temperature please.'
                           }
                         </Text>
                       </View>

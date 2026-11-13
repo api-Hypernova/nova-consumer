@@ -20,6 +20,7 @@ type ProfileHeaderProps = {
   booking: string;
   status: string;
   date: string;
+  month?: string;
   time: string;
   customContainerStyles?: ViewStyle;
 };
@@ -35,6 +36,7 @@ export const ProfileHeader: React.FC<ProfileHeaderProps> = ({
   booking,
   status,
   date,
+  month,
   time,
   customContainerStyles,
 }) => {
@@ -75,13 +77,13 @@ export const ProfileHeader: React.FC<ProfileHeaderProps> = ({
         <View style={styles.detailsContainer}>
           <View>
             <Text bold size={26}>
-              {name || 'Nathan Alexander'}
+              {name || 'Theo Marlowe'}
             </Text>
             <Text
               topSpacing={10}
               size={14}
               color={AppTheme.SecondaryGrayTextColor}>
-              {booking || 'Appointment at MYA Fashion'}
+              {booking || 'Appointment at Atelier Lumen'}
             </Text>
 
             <SecondaryButton
@@ -98,7 +100,7 @@ export const ProfileHeader: React.FC<ProfileHeaderProps> = ({
               {date || '13'}
             </Text>
             <Text topSpacing={3} centered bold size={10} color={AppTheme.Base}>
-              {'October'}
+              {month || 'November'}
             </Text>
             <Text size={8} topSpacing={2} color={AppTheme.Base}>
               {time || '07:22 PM'}

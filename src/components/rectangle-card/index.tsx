@@ -16,7 +16,7 @@ type HorizontalCardProps = {
 };
 
 export const HorizontalCard: React.FC<HorizontalCardProps> = ({
-  title = 'Nathan Alexander',
+  title = 'Theo Marlowe',
   subTitle = 'saskiropokova@mail.com',
   onDeleteButtonPress,
   containerStyle,

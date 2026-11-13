@@ -68,7 +68,7 @@ export const OnboardingScreen = () => {
         useNativeDriver: true,
       }).start(() => {
         setCurrentIndex(nextIndex); 
-        flatListRef.current?.scrollToIndex({ index: nextIndex, animated: false }); 
+        flatListRef.current?.scrollToOffset({ offset: nextIndex * width, animated: false }); 
 
         Animated.timing(fadeAnim, {
           toValue: 1,

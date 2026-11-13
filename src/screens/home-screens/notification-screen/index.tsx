@@ -25,11 +25,11 @@ const notifications: UpdatesSectionListDataType[] = [
     data: [
       {
         id: '1',
-        type: 'New Appointment',
+        type: 'Booking Confirmed',
         time: '15:17',
         user: {
-          name: 'Mike Tyson',
-          message: 'You got a new appointment',
+          name: 'Atelier Lumen',
+          message: 'Your cut with Theo is set for Thu 19 Nov, 10:00',
           avatar: Images.profileImg, // Replace with actual image URL
         },
       },
@@ -38,9 +38,9 @@ const notifications: UpdatesSectionListDataType[] = [
         type: 'Message',
         time: '15:01',
         user: {
-          name: 'Derek Salon',
+          name: 'Maison Verre',
           message:
-            'Please clear all dues before appointment. Please clear all dues before appointment.Please clear all dues before appointment',
+            'Hi Avery, we have a Friday opening at 16:30 if you would like to move your gloss treatment. Just reply here.',
           avatar: Images.hairCut, // Replace with actual image URL
         },
       },
@@ -52,71 +52,71 @@ const notifications: UpdatesSectionListDataType[] = [
     data: [
       {
         id: '3',
-        type: 'Studio booking on Jun 22, 2021 at 14:34',
+        type: 'Booking confirmed - Nov 7, 2026 at 11:00',
         time: null,
         user: {
-          name: 'Athletic Club Davina',
-          message: 'Jl. Soekarno Hatta No.9 A, Jatimulyo',
+          name: 'Maison Verre',
+          message: '9 Harbor Plaza, Marlowe Bay',
           avatar: Images.hairCut, // Replace with actual image URL
         },
       },
       {
         id: '4',
-        type: 'Studio booking on Jun 22, 2021 at 14:34',
+        type: 'Booking confirmed - Nov 6, 2026 at 16:15',
         time: null,
         user: {
-          name: 'Athletic Club Davina',
-          message: 'Jl. Soekarno Hatta No.9 A, Jatimulyo',
+          name: 'Studio Nine',
+          message: '27 Larkspur Ave, Marlowe Bay',
           avatar: Images.hairCut, // Replace with actual image URL
         },
       },
       {
         id: '5',
-        type: 'Studio booking on Jun 22, 2021 at 14:34',
+        type: 'Booking confirmed - Nov 5, 2026 at 14:30',
         time: null,
         user: {
-          name: 'Athletic Club Davina',
-          message: 'Jl. Soekarno Hatta No.9 A, Jatimulyo',
+          name: 'Orchid & Oak',
+          message: '38 Willow Row, Marlowe Bay',
           avatar: Images.hairCut, // Replace with actual image URL
         },
       },
       {
         id: '6',
-        type: 'Studio booking on Jun 22, 2021 at 14:34',
+        type: 'Booking confirmed - Nov 4, 2026 at 09:30',
         time: null,
         user: {
-          name: 'Athletic Club Davina',
-          message: 'Jl. Soekarno Hatta No.9 A, Jatimulyo',
+          name: 'Atelier Lumen',
+          message: '214 Larkspur Ave, Marlowe Bay',
           avatar: Images.hairCut, // Replace with actual image URL
         },
       },
       {
         id: '7',
-        type: 'Studio booking on Jun 22, 2021 at 14:34',
+        type: 'Booking confirmed - Nov 3, 2026 at 17:45',
         time: null,
         user: {
-          name: 'Athletic Club Davina',
-          message: 'Jl. Soekarno Hatta No.9 A, Jatimulyo',
+          name: 'Maison Verre',
+          message: '9 Harbor Plaza, Marlowe Bay',
           avatar: Images.hairCut, // Replace with actual image URL
         },
       },
       {
         id: '8',
-        type: 'Studio booking on Jun 22, 2021 at 14:34',
+        type: 'Booking confirmed - Nov 2, 2026 at 13:00',
         time: null,
         user: {
-          name: 'Athletic Club Davina',
-          message: 'Jl. Soekarno Hatta No.9 A, Jatimulyo',
+          name: 'Studio Nine',
+          message: '27 Larkspur Ave, Marlowe Bay',
           avatar: Images.hairCut, // Replace with actual image URL
         },
       },
       {
         id: '9',
-        type: 'Studio booking on Jun 22, 2021 at 14:34',
+        type: 'Booking confirmed - Nov 2, 2026 at 10:15',
         time: null,
         user: {
-          name: 'Athletic Club Davina',
-          message: 'Jl. Soekarno Hatta No.9 A, Jatimulyo',
+          name: 'Orchid & Oak',
+          message: '38 Willow Row, Marlowe Bay',
           avatar: Images.hairCut, // Replace with actual image URL
         },
       },

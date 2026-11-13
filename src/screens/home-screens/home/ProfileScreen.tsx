@@ -16,6 +16,7 @@ import {logout} from '../../../redux/reducers';
 import navigationService from '../../../config/navigationService';
 import {HomeRoutes} from '../../../constants';
 import {handleHaptictFeedback, SD} from '../../../utils';
+import {CustomImage} from '../../../components/custom-image';
 
 export const ProfileScreen = ({}) => {
   const dispatch = useDispatch();
@@ -153,7 +154,7 @@ export const ProfileScreen = ({}) => {
                 </Text>
               )}
             </View>
-            <Image source={Images.arrow} style={styles.arrowIcon} />
+            <CustomImage source={Images.arrow} style={styles.arrowIcon} />
           </CustomTouchable>
         );
       case 'switch':
@@ -229,8 +230,8 @@ export const ProfileScreen = ({}) => {
             ListHeaderComponent={
               <>
                 <CalenderProfile
-                  title={'Arthur Warren'}
-                  subTitle={'johndoe@gmail.com'}
+                  title={'Avery Stone'}
+                  subTitle={'avery.stone@example.com'}
                   containerCustomStyle={{marginTop: 20}}
                   // onProfilePress={handleProfilePress}
                 />

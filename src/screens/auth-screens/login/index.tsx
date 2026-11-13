@@ -74,7 +74,7 @@ export const Login = ({}) => {
         isBackHeader
         bottomButtonTitle="Sign Up"
         backheaderProps={{
-          heading: 'Sign in to Salon App',
+          heading: 'Sign in to Nova',
           subheading: 'Welcome back! Please enter your details',
           isBackArrow: false,
         }}

@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Image, StyleSheet, TouchableOpacity, View} from 'react-native';
 import {Calendar} from 'react-native-calendars';
+import {useLanguage} from '../../i18n';
 import {CustomImage} from '../custom-image';
 import Text from '../text';
 import {Images} from '../../config';
@@ -20,6 +21,7 @@ export const CalendarCard: React.FC<CalendarCardProps> = ({
   onDateSelect,
 }) => {
   const AppTheme = useTheme();
+  const lang = useLanguage();
 
   const handleDayPress = (day: {dateString: string}) => {
     onDateSelect(day.dateString);
@@ -37,13 +39,14 @@ export const CalendarCard: React.FC<CalendarCardProps> = ({
             <CustomImage source={Images.Backbtn} style={styles.icon} />
           </TouchableOpacity>
           <Text size={18} bold>
-            Sarha Burres
+            Sofia Reyes
           </Text>
           <CustomImage source={Images.calendarIcon} style={styles.icon} />
         </View>
       </View>
 
       <Calendar
+        key={lang}
         onDayPress={handleDayPress}
         enableSwipeMonths
         markedDates={{

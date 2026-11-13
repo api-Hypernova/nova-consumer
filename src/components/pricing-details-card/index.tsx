@@ -7,11 +7,12 @@ import Text from '../text';
 const pricingData = [
   // {id: '1', label: 'Payment Status', value: 'Accepted', isHighlight: true},
   // {id: '2', label: 'Payment Method', value: 'Card', isHighlight: true},
-  {id: '3', label: 'Platform Fees', value: '-$120', isHighlight: false},
-  {id: '4', label: 'VAT', value: '-$40', isHighlight: false},
+  {id: '2', label: 'Services (3)', value: '$130.00', isHighlight: false},
+  {id: '3', label: 'Booking fee', value: '$3.00', isHighlight: false},
+  {id: '4', label: 'VAT', value: '$10.40', isHighlight: false},
 ];
 
-const totalAmount = '$120';
+const totalAmount = '$143.40';
 
 // Render Item Function
 type PricingDetailsCardProps = {

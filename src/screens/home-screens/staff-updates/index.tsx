@@ -1,4 +1,5 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
+import {TText as Text} from '../../../i18n';
 import React from 'react';
 import {BackHeader, MainContainer} from '../../../components';
 import {Images} from '../../../config';
@@ -11,11 +12,11 @@ const notifications: UpdatesSectionListDataType[] = [
     data: [
       {
         id: '1',
-        type: 'New Appointment',
+        type: 'Booking Confirmed',
         time: '15:17',
         user: {
-          name: 'Mike Tyson',
-          message: 'You got a new appointment',
+          name: 'Atelier Lumen',
+          message: 'Your cut with Theo is set for Thu 19 Nov, 10:00',
           avatar: Images.profileImg, // Replace with actual image URL
         },
       },
@@ -24,9 +25,9 @@ const notifications: UpdatesSectionListDataType[] = [
         type: 'Message',
         time: '15:01',
         user: {
-          name: 'Derek Salon',
+          name: 'Maison Verre',
           message:
-            'Please clear all dues before appointment. Please clear all dues before appointment.Please clear all dues before appointment',
+            'Hi Avery, we have a Friday opening at 16:30 if you would like to move your gloss treatment. Just reply here.',
           avatar: Images.hairCut, // Replace with actual image URL
         },
       },
@@ -38,31 +39,31 @@ const notifications: UpdatesSectionListDataType[] = [
     data: [
       {
         id: '3',
-        type: 'Studio booking on Jun 22, 2021 at 14:34',
+        type: 'Booking confirmed - Sep 22, 2026 at 14:30',
         time: null,
         user: {
-          name: 'Athletic Club Davina',
-          message: 'Jl. Soekarno Hatta No.9 A, Jatimulyo',
+          name: 'Orchid & Oak',
+          message: '38 Willow Row, Marlowe Bay',
           avatar: Images.hairCut, // Replace with actual image URL
         },
       },
       {
         id: '4',
-        type: 'Studio booking on Jun 22, 2021 at 14:34',
+        type: 'Booking confirmed - Sep 22, 2026 at 14:30',
         time: null,
         user: {
-          name: 'Athletic Club Davina',
-          message: 'Jl. Soekarno Hatta No.9 A, Jatimulyo',
+          name: 'Orchid & Oak',
+          message: '38 Willow Row, Marlowe Bay',
           avatar: Images.hairCut, // Replace with actual image URL
         },
       },
       {
         id: '5',
-        type: 'Studio booking on Jun 22, 2021 at 14:34',
+        type: 'Booking confirmed - Sep 22, 2026 at 14:30',
         time: null,
         user: {
-          name: 'Athletic Club Davina',
-          message: 'Jl. Soekarno Hatta No.9 A, Jatimulyo',
+          name: 'Orchid & Oak',
+          message: '38 Willow Row, Marlowe Bay',
           avatar: Images.hairCut, // Replace with actual image URL
         },
       },

@@ -1,4 +1,5 @@
-import {FlatList, StyleSheet, Text, View} from 'react-native';
+import {FlatList, StyleSheet, View} from 'react-native';
+import {TText as Text} from '../../../i18n';
 import React from 'react';
 import {
   MainContainer,
@@ -32,7 +33,7 @@ const RecommendationDetails = [
   {
     id: '3',
     imageSource: Images.unsplash3,
-    title: 'Glow Spa',
+    title: 'Maison Verre',
     subtitle: 'Relax and rejuvenate with our premium spa treatments.',
   },
   {
@@ -58,7 +59,7 @@ const RecommendationDetails = [
   {
     id: '7',
     imageSource: Images.unsplash3,
-    title: 'Glow Spa',
+    title: 'Maison Verre',
     subtitle: 'Relax and rejuvenate with our premium spa treatments.',
   },
   {

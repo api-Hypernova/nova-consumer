@@ -30,69 +30,45 @@ import {ProvidedServicesCardProps} from '../../../components/provided-services-c
 const serviceCardData = [
   {
     id: '1',
-    title: 'HBA Studio',
+    title: 'Atelier Lumen',
     bgImage: Images.haircutImg,
-    location: '507 St.Endicott, 13 Km Away',
+    location: '214 Larkspur Ave, 1.3 km away',
     rating: '4.5',
     views: '825',
   },
   {
     id: '2',
-    title: 'Forever Salon Spa',
+    title: 'Maison Verre',
     bgImage: Images.specialSalon,
-    location: '507 St.Endicott, 13 Km Away',
+    location: '214 Larkspur Ave, 1.3 km away',
     rating: '4.5',
     views: '1.2k',
   },
   {
     id: '3',
-    title: 'Body Waxing',
+    title: "The Gentlemen's Room",
     bgImage: Images.haircutImg,
-    location: 'Los Angeles',
+    location: '38 Willow Row, 2.4 km away',
     rating: '4.5',
     views: '1.2k',
   },
   {
     id: '4',
-    title: 'Facial Waxing',
+    title: 'Orchid & Oak',
     bgImage: Images.specialSalon,
-    location: 'Los Angeles',
+    location: '38 Willow Row, 2.4 km away',
     rating: '4.5',
     views: '1.2k',
   },
 ];
 
 const servicesData = [
-  {
-    id: '1',
-    title: 'Special Treatment',
-    imageSource: Images.beardTreatment,
-  },
-  {
-    id: '2',
-    title: 'Hair Styling',
-    imageSource: Images.beardShave,
-  },
-  {
-    id: '3',
-    title: 'Massage Therapy',
-    imageSource: Images.faical,
-  },
-  {
-    id: '4',
-    title: 'Special Treatment',
-    imageSource: Images.beardTreatment,
-  },
-  {
-    id: '5',
-    title: 'Hair Styling',
-    imageSource: Images.beardShave,
-  },
-  {
-    id: '6',
-    title: 'Massage Therapy',
-    imageSource: Images.faical,
-  },
+  {id: '1', title: 'Hair Cut', imageSource: Images.services3},
+  {id: '2', title: 'Nail Care', imageSource: Images.faical},
+  {id: '3', title: 'Scalp Care', imageSource: Images.beardTreatment},
+  {id: '4', title: 'Gel Nails', imageSource: Images.services6},
+  {id: '5', title: 'Blowouts', imageSource: Images.beardShave},
+  {id: '6', title: 'Polish', imageSource: Images.services7},
 ];
 
 interface TitleHeaderProps {
@@ -197,7 +173,7 @@ export const HomeScreen = () => {
                 style={{width: SD.wp(16), height: SD.hp(16)}}
               />
               <Text size={16} bold color={AppTheme.Primary} leftSpacing={8}>
-                San Francisco
+                Marlowe Bay
               </Text>
             </View>
           </View>

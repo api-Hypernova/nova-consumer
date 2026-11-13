@@ -1,5 +1,6 @@
 import React, {useRef, useState} from 'react';
-import {Image, StyleSheet, TextInput, View} from 'react-native';
+import {Image, StyleSheet, View} from 'react-native';
+import {TTextInput as TextInput} from '../../../i18n';
 import {SwipeListView} from 'react-native-swipe-list-view';
 import {
   BackHeader,
@@ -21,11 +22,11 @@ import {Formik} from 'formik';
 import {useTheme} from '../../../hooks';
 
 const initialStaffData = [
-  {id: '1', name: 'Nathan Alexander', role: 'Senior Barber'},
-  {id: '2', name: 'Jenny Winkles', role: 'Hair Stylist'},
-  {id: '3', name: 'Sarah Burress', role: 'Makeup Artist'},
-  {id: '4', name: 'Mike Thompson', role: 'Senior Barber'},
-  {id: '5', name: 'Annabel Rohan', role: 'Hair Stylist'},
+  {id: '1', name: 'Theo Marlowe', role: 'Senior Barber'},
+  {id: '2', name: 'Priya Okafor', role: 'Hair Stylist'},
+  {id: '3', name: 'Sofia Reyes', role: 'Makeup Artist'},
+  {id: '4', name: 'Daniel Park', role: 'Senior Barber'},
+  {id: '5', name: 'Annabel Roth', role: 'Hair Stylist'},
 ];
 
 export const StaffManagement = () => {

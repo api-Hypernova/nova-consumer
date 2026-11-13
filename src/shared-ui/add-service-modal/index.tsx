@@ -1,15 +1,7 @@
 import {Formik} from 'formik';
 import React, {useRef, useState} from 'react';
-import {
-  Animated,
-  KeyboardAvoidingView,
-  Platform,
-  ScrollView,
-  StyleSheet,
-  TextInput,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import {Animated, KeyboardAvoidingView, Platform, ScrollView, StyleSheet, TouchableOpacity, View} from 'react-native';
+import {TTextInput as TextInput} from '../../i18n';
 import {
   BackHeader,
   BottamButton,

@@ -71,7 +71,7 @@ export const FilterModal: React.FC<FilterModalProps> = ({
             leftSpacing={12}
             size={16}
             medium>
-            Los Angeles
+            Marlowe Bay
           </Text>
         </TouchableOpacity>
 

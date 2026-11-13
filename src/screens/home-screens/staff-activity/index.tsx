@@ -115,7 +115,7 @@ export const StaffActivityScreen = () => {
         <View style={{top: -SD.hp(20)}}>
           <RoundImageContainer source={Images.profileImg} circleWidth={65} />
           <Text bold size={20} centered bottomSpacing={12} topSpacing={12}>
-            Nathan Alexander
+            Theo Marlowe
           </Text>
           <Text
             medium
@@ -134,7 +134,7 @@ export const StaffActivityScreen = () => {
         }}>
         <View style={{height: SD.hp(110), paddingHorizontal: SD.wp(25)}}>
           <RequestCard
-            title="Nathan Alexander"
+            title="Theo Marlowe"
             subTitle="has requested time off"
             containerCustomStyle={styles.containerCustomStyle}
             isInfoIcon={false}
@@ -213,9 +213,9 @@ export const StaffActivityScreen = () => {
         </View>
         <View style={{paddingVertical: 30, paddingHorizontal: 20}}>
           <BookingCard
-            salonName={'MYA Salon'}
+            salonName={'Atelier Lumen'}
             services={'Haircut, Facial'}
-            location={'Downtown Avenue'}
+            location={'Larkspur Ave'}
             isInfoIcon
             onPress={() => {
               navigationService.navigate(HomeRoutes['BookingDetails']);

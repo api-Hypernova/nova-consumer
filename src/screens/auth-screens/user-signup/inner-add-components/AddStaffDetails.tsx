@@ -1,4 +1,5 @@
-import {FlatList, StyleSheet, Text, TextInput, View} from 'react-native';
+import {FlatList, StyleSheet, View} from 'react-native';
+import {TText as Text, TTextInput as TextInput} from '../../../../i18n';
 import React, {useRef, useState} from 'react';
 import {ComponentToRenderTypes} from '../UserSignupTypes';
 import {

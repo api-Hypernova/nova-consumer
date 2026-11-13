@@ -1,4 +1,5 @@
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, View} from 'react-native';
+import {TText as Text} from '../../../i18n';
 import React from 'react';
 import {AuthHeader, CardContainer} from '../../../components';
 import {Formik} from 'formik';

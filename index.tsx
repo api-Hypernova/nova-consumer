@@ -12,8 +12,12 @@ import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {persistor, store} from './src/redux';
 import QueryProvider from './src/queryClient';
 import App from './App';
+import {LanguagePicker, loadLanguage} from './src/i18n';
 
 function AppWrapper() {
+  React.useEffect(() => {
+    loadLanguage();
+  }, []);
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
@@ -21,6 +25,7 @@ function AppWrapper() {
           <GestureHandlerRootView style={{flex: 1}}>
             <QueryProvider>
               <App />
+              <LanguagePicker />
             </QueryProvider>
           </GestureHandlerRootView>
         </SafeAreaProvider>

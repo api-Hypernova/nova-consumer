@@ -1,12 +1,5 @@
-import {
-  ImageProps,
-  StyleSheet,
-  TouchableOpacity,
-  View,
-  ViewProps,
-  ViewStyle,
-  Text as RNText,
-} from 'react-native';
+import {ImageProps, StyleSheet, TouchableOpacity, View, ViewProps, ViewStyle} from 'react-native';
+import {TText as RNText} from '../../i18n';
 import React from 'react';
 import {useTheme} from '../../hooks';
 import {RoundImageContainer} from '../round-image-container';
@@ -33,6 +26,7 @@ export type CalendarManagementCardProps = {
   styleType2?: boolean;
   animationType?: any;
   btnText?: string;
+  btnSelected?: boolean;
 };
 
 export const CalendarManagementCard: React.FC<CalendarManagementCardProps> = ({
@@ -44,6 +38,7 @@ export const CalendarManagementCard: React.FC<CalendarManagementCardProps> = ({
   isStatus = false,
   counter,
   btnText,
+  btnSelected,
   time,
   rating,
   activeOpacity,
@@ -151,7 +146,7 @@ export const CalendarManagementCard: React.FC<CalendarManagementCardProps> = ({
       ) : (
         <>
           <SecondaryButton
-            textColor={AppTheme.Primary}
+            textColor={btnSelected ? '#ffffff' : AppTheme.Primary}
             onPress={onPress}
             title={btnText || 'View'}
             isSecondary
@@ -159,9 +154,9 @@ export const CalendarManagementCard: React.FC<CalendarManagementCardProps> = ({
             customStyles={[
               styles.customeButtonStyles,
               {
-                backgroundColor: AppTheme.BgColor2,
-                borderColor: AppTheme.SecondaryBorderColor,
-              },
+                backgroundColor: btnSelected ? AppTheme.Primary : AppTheme.BgColor2,
+                borderColor: btnSelected ? AppTheme.Primary : AppTheme.SecondaryBorderColor,
+              }, // DEMO-SEL2
             ]}
           />
         </>

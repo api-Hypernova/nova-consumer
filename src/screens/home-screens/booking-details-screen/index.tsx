@@ -21,8 +21,8 @@ import {RouteProp, useRoute} from '@react-navigation/native';
 import {BookingDetailsRoutesTypes} from './BookingDetailsTypes';
 
 const services = [
-  {id: '1', title: 'Jack Salon & Studio', time: '50 Mins', amount: '$450'},
-  {id: '2', title: 'Elite Spa & Wellness', time: '60 Mins', amount: '$550'},
+  {id: '1', title: 'Signature Cut & Style', time: '45 Mins', amount: '$65'},
+  {id: '2', title: 'Gloss Treatment', time: '30 Mins', amount: '$40'},
 ];
 
 const renderServiceCard = ({item}: {item: any}) => (
@@ -72,8 +72,8 @@ export const BookingDetails = () => {
 
             <ProfileHeader
               // customContainerStyles={{marginTop: SD.hp(5)}}
-              name="Nathan Alexander"
-              booking="Appointment at MYA Fashion"
+              name="Theo Marlowe"
+              booking="Appointment at Atelier Lumen"
               status={isCompleted ? 'Completed' : 'Awaiting Response'}
               date="13"
               time="07:22 PM"
@@ -107,7 +107,7 @@ export const BookingDetails = () => {
                   },
                 ]}>
                 <Text regular size={14}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  Please use sulfate-free products. Sensitive scalp, so a gentle rinse temperature please.
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </Text>
               </View>

@@ -1,10 +1,5 @@
-import {
-  Image,
-  StyleSheet,
-  TextInput,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import {Image, StyleSheet, TouchableOpacity, View} from 'react-native';
+import {TTextInput as TextInput} from '../../../i18n';
 import React, {useRef} from 'react';
 import {
   BackHeader,
@@ -85,7 +80,7 @@ export const UserLocationScreen = () => {
                       leftSpacing={14}
                       size={16}
                       semiBold>
-                      Shop 101,Hamilton Course
+                      214 Larkspur Ave
                     </Text>
                     {/* <Image style={styles.googleIcon} source={Images.link} /> */}
                   </TouchableOpacity>

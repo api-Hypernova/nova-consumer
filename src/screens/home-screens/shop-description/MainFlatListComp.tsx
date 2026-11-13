@@ -38,104 +38,56 @@ const actiosBtnData = [
 ];
 
 const serviceData: ServicesData[] = [
-  {
-    id: 1,
-    title: 'Body Waxing',
-    subTitle: '$150',
-    source: Images.hairCut,
-    time: '30 min',
-    isSelected: false,
-  },
-  {
-    id: 2,
-    title: 'Consultation',
-    subTitle: '$40',
-    source: Images.facicalImg,
-    time: '43 min',
-    isSelected: false,
-  },
-  // {
-  //   id: 3,
-  //   title: 'Hair Cut',
-  //   subTitle: '$40',
-  //   source: Images.faical,
-  //   time: '90 min',
-  //   isSelected: false,
-  // },
-  // {
-  //   id: 4,
-  //   title: 'Hair Coloring',
-  //   subTitle: '$150',
-  //   time: '35 min',
-  //   source: Images.specialImg,
-  //   isSelected: false,
-  // },
+  {id: 1, title: 'Signature Cut & Style', subTitle: '$65', source: Images.hairCut, time: '45 min', isSelected: false},
+  {id: 2, title: 'Gloss Treatment', subTitle: '$40', source: Images.unsplash3, time: '30 min', isSelected: false},
+  {id: 5, title: 'Gel Manicure', subTitle: '$25', source: Images.faical, time: '20 min', isSelected: false},
+  {id: 6, title: 'Blow-dry & Finish', subTitle: '$35', source: Images.beardShave, time: '30 min', isSelected: false},
+  {id: 7, title: 'Scalp Ritual', subTitle: '$30', source: Images.beardTreatment, time: '25 min', isSelected: false},
 ];
 
 const packageData: ServicesData[] = [
-  {
-    id: 9,
-    title: 'Body Waxing Package',
-    subTitle: '$150',
-    source: Images.hairCut,
-    time: '35 min',
-    isSelected: false,
-  },
-  {
-    id: 3,
-    title: 'Hair Cut',
-    subTitle: '$40',
-    source: Images.faical,
-    time: '90 min',
-    isSelected: false,
-  },
-  {
-    id: 4,
-    title: 'Hair Coloring',
-    subTitle: '$150',
-    time: '35 min',
-    source: Images.specialImg,
-    isSelected: false,
-  },
+  {id: 9, title: 'Cut, Colour & Gloss', subTitle: '$185', source: Images.specialImg, time: '150 min', isSelected: false},
+  {id: 3, title: 'Wedding Guest Styling', subTitle: '$95', source: Images.hairCut, time: '75 min', isSelected: false},
+  {id: 4, title: 'Mani + Pedi Duo', subTitle: '$70', source: Images.faical, time: '90 min', isSelected: false},
 ];
 
 const reviewsData: ReviewsDataTypes[] = [
   {
     id: 1,
-    title: 'Nathan Alexander',
+    title: 'Theo Marlowe',
     subTitle:
-      'Amazing!  The room is good than the picture. Thanks for amazing experience!',
+      'Best cut I have had in years. Theo listened and nailed it. Booked my next visit already!',
     source: Images.chatIcon2,
     rating: '4.5',
   },
   {
     id: 2,
-    title: 'Jenny Winkles',
+    title: 'Priya Okafor',
     subTitle:
-      'The service is on point, and I really like the facilities. Good job!',
+      'Lovely, calm studio and super friendly team. Easy booking and no waiting.',
     source: Images.chatIcon,
     rating: '4.2',
   },
   {
     id: 3,
-    title: 'Sarah Burress',
+    title: 'Sofia Reyes',
     subTitle:
-      'The service is on point, and I really like the facilities. Good job!',
+      'Great colour work and the gloss treatment is a game changer. Highly recommend.',
     source: Images.chatIcon2,
     rating: '4.5',
   },
   {
     id: 4,
-    title: 'Mike Thompson',
+    title: 'Daniel Park',
     subTitle:
-      'The service is on point, and I really like the facilities. Good job!',
+      'Spotless space, on time and the gel manicure is still perfect after three weeks.',
     source: Images.chatIcon3,
     rating: '4.5',
   },
   {
     id: 5,
-    title: 'Annabel Rohan',
-    subTitle: 'Hair Stylist',
+    title: 'Annabel Roth',
+    subTitle: 'Wonderful experience from start to finish. Will be back!',
     source: Images.chatIcon4,
     rating: '4.5',
   },
@@ -300,17 +252,17 @@ export const MainFlatListComp: React.FC<MainFlatListCompProps> = ({
         </View>
         <View style={styles.businessInfo}>
           <Text bold size={24}>
-            Woodlands Hills Salon
+            Atelier Lumen
           </Text>
           <View style={[styles.flexRow, {marginTop: SD.hp(5)}]}>
             <Text regular size={14}>
-              {`Keira throughway`}
+              {`214 Larkspur Ave`}
             </Text>
             <Text bold size={14}>
               {` • `}
             </Text>
             <Text regular size={14}>
-              {`5.0 Kms`}
+              {`1.3 km`}
             </Text>
           </View>
         </View>
@@ -464,7 +416,7 @@ export const MainFlatListComp: React.FC<MainFlatListCompProps> = ({
           </View>
           <View style={{maxWidth: '60%'}}>
             <Text size={22} semiBold primartColor right>
-              $449
+              $105
             </Text>
           </View>
         </View>

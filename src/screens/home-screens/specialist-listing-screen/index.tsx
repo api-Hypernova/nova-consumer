@@ -1,5 +1,5 @@
 import {FlatList, StyleSheet, View} from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 import {
   BackHeader,
   BottamButton,
@@ -17,67 +17,68 @@ import {CalendarManagementCardProps} from '../../../components/calendar-manageme
 const StaffListing = [
   {
     id: '1',
-    title: 'Nathan Alexander',
-    subTitle: 'Senior Barber',
+    title: 'Theo Marlowe',
+    subTitle: 'Senior Stylist',
     source: Images.Ellipse,
   },
   {
     id: '2',
-    title: 'Jenny Winkles',
-    subTitle: 'Hair Stylist',
+    title: 'Priya Okafor',
+    subTitle: 'Colour Specialist',
     source: Images.Ellipse1,
   },
   {
     id: '3',
-    title: 'Sarah Burress',
-    subTitle: 'Make up Artist',
+    title: 'Sofia Reyes',
+    subTitle: 'Makeup Artist',
     source: Images.Ellipse2,
   },
   {
     id: '4',
-    title: 'Mike Thompson',
-    subTitle: 'Senior Barber',
+    title: 'Daniel Park',
+    subTitle: 'Master Barber',
     source: Images.Ellipse3,
   },
   {
     id: '5',
-    title: 'Annabel Rohan',
-    subTitle: 'Hair Stylist',
+    title: 'Annabel Roth',
+    subTitle: 'Texture Specialist',
     source: Images.Ellipse4,
   },
   {
     id: '6',
-    title: 'Nathan Alexander',
-    subTitle: 'Senior Barber',
+    title: 'Mateo Silva',
+    subTitle: 'Barber',
     source: Images.Ellipse,
   },
   {
     id: '7',
-    title: 'Jenny Winkles',
-    subTitle: 'Hair Stylist',
+    title: 'Hana Kimura',
+    subTitle: 'Nail Artist',
     source: Images.Ellipse1,
   },
   {
     id: '8',
-    title: 'Sarah Burress',
-    subTitle: 'Make up Artist',
+    title: 'Olivia Grant',
+    subTitle: 'Esthetician',
     source: Images.Ellipse2,
   },
   {
     id: '9',
-    title: 'Mike Thompson',
-    subTitle: 'Senior Barber',
+    title: 'Marcus Bell',
+    subTitle: 'Stylist',
     source: Images.Ellipse3,
   },
   {
     id: '10',
-    title: 'Annabel Rohan',
-    subTitle: 'Hair Stylist',
+    title: 'Zara Ahmed',
+    subTitle: 'Scalp Therapist',
     source: Images.Ellipse4,
   },
 ];
 
 export const OurSpecialistScreen = () => {
+  const [selectedId, setSelectedId] = useState<string | null>(null); // DEMO-SEL
   const renderItem = ({
     item,
     index,
@@ -86,7 +87,8 @@ export const OurSpecialistScreen = () => {
     index: number;
   }) => (
     <CalendarManagementCard
-      onPress={item.onPress}
+      onPress={() => setSelectedId((item as any).id)}
+      btnSelected={selectedId === (item as any).id}
       containerCustomStyle={{
         // paddingBottom: SD.hp(10),
         paddingVertical: SD.hp(15),
@@ -97,7 +99,7 @@ export const OurSpecialistScreen = () => {
       subTitle={item.subTitle}
       source={item.source}
       animationType="opacity"
-      btnText="Select"
+      btnText={selectedId === (item as any).id ? 'Selected' : 'Select'}
       isStatus={false}
     />
   );

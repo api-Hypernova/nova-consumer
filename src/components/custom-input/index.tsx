@@ -1,16 +1,6 @@
 import React, {FC, Ref, useState} from 'react';
-import {
-  Image,
-  ImageProps,
-  ScrollView,
-  StyleSheet,
-  TextInput,
-  TextInputProps,
-  TouchableOpacity,
-  View,
-  ViewProps,
-  ViewStyle,
-} from 'react-native';
+import {Image, ImageProps, ScrollView, StyleSheet, TextInputProps, TouchableOpacity, View, ViewProps, ViewStyle} from 'react-native';
+import {TTextInput as TextInput} from '../../i18n';
 import {Images} from '../../config';
 import {useTheme} from '../../hooks';
 import {Fonts} from '../../styles';

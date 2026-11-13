@@ -1,12 +1,6 @@
 import React, {useState} from 'react';
-import {
-  View,
-  Text,
-  TextInput,
-  StyleSheet,
-  Platform,
-  KeyboardAvoidingView,
-} from 'react-native';
+import {View, StyleSheet, Platform, KeyboardAvoidingView} from 'react-native';
+import {TText as Text, TTextInput as TextInput} from '../../i18n';
 import MaskedView from '@react-native-masked-view/masked-view';
 
 type FormikCustomTimePickerProps = {

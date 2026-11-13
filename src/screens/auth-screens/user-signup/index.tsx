@@ -1,4 +1,5 @@
-import {Alert, SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import {Alert, SafeAreaView, StyleSheet, View} from 'react-native';
+import {TText as Text} from '../../../i18n';
 import React, {useState} from 'react';
 import {BackHeader, MainContainer} from '../../../components';
 import {AddFormComponentMap} from './UserSignupTypes';

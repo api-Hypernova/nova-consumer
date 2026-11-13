@@ -1,4 +1,5 @@
-import {FlatList, Platform, StyleSheet, Text, View} from 'react-native';
+import {FlatList, Platform, StyleSheet, View} from 'react-native';
+import {TText as Text} from '../../../i18n';
 import React, {useState} from 'react';
 import {
   BackHeader,
@@ -17,33 +18,33 @@ import {SegmentedRatingControl} from '../../../shared-ui/rating-segmented-contro
 const serviceCardData = [
   {
     id: '1',
-    title: 'HBA Studio',
+    title: 'Atelier Lumen',
     bgImage: Images.haircutImg,
-    location: '507 St.Endicott, 13 Km Away',
+    location: '214 Larkspur Ave, 1.3 km away',
     rating: '4.5',
     views: '825',
   },
   {
     id: '2',
-    title: 'Forever Salon Spa',
+    title: 'Maison Verre',
     bgImage: Images.specialSalon,
-    location: '507 St.Endicott, 13 Km Away',
+    location: '214 Larkspur Ave, 1.3 km away',
     rating: '4.5',
     views: '1.2k',
   },
   {
     id: '3',
-    title: 'Body Waxing',
+    title: "The Gentlemen's Room",
     bgImage: Images.haircutImg,
-    location: 'Los Angeles',
+    location: '38 Willow Row, 2.4 km away',
     rating: '4.5',
     views: '1.2k',
   },
   {
     id: '4',
-    title: 'Facial Waxing',
+    title: 'Orchid & Oak',
     bgImage: Images.specialSalon,
-    location: 'Los Angeles',
+    location: '38 Willow Row, 2.4 km away',
     rating: '4.5',
     views: '1.2k',
   },

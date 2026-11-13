@@ -1,13 +1,7 @@
-import {
-  FlatList,
-  Image,
-  Platform,
-  StyleSheet,
-  TextInput,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import {FlatList, Image, Platform, StyleSheet, TouchableOpacity, View} from 'react-native';
+import {TTextInput as TextInput, useT} from '../../../i18n';
 import React, {useState} from 'react';
+import moment from 'moment';
 import {
   BackHeader,
   CalenderProfile,
@@ -27,52 +21,26 @@ import {BorderlessButton} from 'react-native-gesture-handler';
 
 export const ChatScreen = () => {
   const {AppTheme} = useTheme();
+  const t = useT();
 
   const handleGoback = () => {
     navigationService.goBack();
   };
 
+  const [draft, setDraft] = useState('');
+  const sendDraft = () => {
+    const t = draft.trim();
+    if (!t) return;
+    setMessages((prev: any) => [{_id: Date.now(), text: t, createdAt: new Date(2026, 9, 25, 10, 35), user: {_id: 1, name: 'You'}}, ...prev]);
+    setDraft('');
+    setTimeout(() => setMessages((prev: any) => [{_id: Date.now() + 1, text: 'Wonderful, you are all set. See you Thursday at 10:00!', createdAt: new Date(2026, 9, 25, 10, 36), user: {_id: 2, name: 'Atelier Lumen'}}, ...prev]), 1400);
+  };
   const [messages, setMessages] = useState([
-    {
-      _id: 5,
-      text: 'Yes the service is available, so you can make booking.',
-      user: {
-        _id: 2,
-        name: 'Service Provider',
-      },
-    },
-    {
-      _id: 4,
-      text: 'hi is this service currently available?',
-      user: {
-        _id: 1,
-        name: 'You',
-      },
-    },
-    {
-      _id: 1,
-      text: 'Yes the service is available, so you can make booking.',
-      user: {
-        _id: 2,
-        name: 'Service Provider',
-      },
-    },
-    {
-      _id: 2,
-      text: 'Hi Ahmir',
-      user: {
-        _id: 2,
-        name: 'Service Provider',
-      },
-    },
-    {
-      _id: 3,
-      text: 'hi is this service currently available?',
-      user: {
-        _id: 1,
-        name: 'You',
-      },
-    },
+    {_id: 5, text: 'Perfect, see you Thursday at 10:00. Parking is free behind the studio.', createdAt: new Date(2026, 9, 25, 10, 34), user: {_id: 2, name: 'Atelier Lumen'}},
+    {_id: 4, text: 'Great, please book me in with Theo for the cut and a gloss.', createdAt: new Date(2026, 9, 25, 10, 33), user: {_id: 1, name: 'You'}},
+    {_id: 3, text: 'Yes, Thursday at 10:00 is open. The cut takes about 45 minutes.', createdAt: new Date(2026, 9, 25, 10, 32), user: {_id: 2, name: 'Atelier Lumen'}},
+    {_id: 2, text: 'Hi! Do you have anything open Thursday morning?', createdAt: new Date(2026, 9, 25, 10, 31), user: {_id: 1, name: 'You'}},
+    {_id: 1, text: 'Hi Avery, welcome to Atelier Lumen. How can we help?', createdAt: new Date(2026, 9, 25, 10, 30), user: {_id: 2, name: 'Atelier Lumen'}},
   ]);
 
   return (
@@ -98,7 +66,7 @@ export const ChatScreen = () => {
         subTitleSize={12}
         containerCustomStyle={styles.calendarContainer(AppTheme)}
         isCallIcon
-        title="Jhone Endrue"
+        title="Atelier Lumen"
         subTitle="Online"
         stylesContainer={styles.calendarInnerContainer}
         customImageStyle={styles.calendarImage}
@@ -109,8 +77,8 @@ export const ChatScreen = () => {
       <View style={styles.contentContainer}>
         <SharedServiceCard
           cardContainerStyle={styles.sharedCardContainer}
-          title={'Specialty Treatments'}
-          location={'507 University St.Endicott, NY 13760'}
+          title={'Signature Cut & Style'}
+          location={'214 Larkspur Ave, Marlowe Bay'}
           amount="$40"
           rating={'4.5'}
           views={'84'}
@@ -118,7 +86,7 @@ export const ChatScreen = () => {
 
         <GiftedChat
           listViewProps={{showsVerticalScrollIndicator: false}}
-          messages={messages}
+          messages={messages.map((m: any) => ({...m, text: t(m.text)}))}
           user={{
             _id: 1,
           }}
@@ -129,6 +97,7 @@ export const ChatScreen = () => {
               <View>
                 <Bubble
                   {...props}
+                  renderTime={() => null}
                   wrapperStyle={{
                     left: styles.bubbleLeftWrapper,
                     right: styles.bubbleRightWrapper(AppTheme),
@@ -144,7 +113,7 @@ export const ChatScreen = () => {
                     {alignSelf: isSender ? 'flex-end' : 'flex-start'},
                   ]}>
                   <Text color={AppTheme.GreyTimeColor} size={12} medium>
-                    10.31 AM
+                    {moment(props.currentMessage.createdAt).format('h:mm A')}
                   </Text>
                 </View>
               </View>
@@ -157,12 +126,15 @@ export const ChatScreen = () => {
                   style={styles.textInput}
                   placeholder="Type message..."
                   placeholderTextColor="#8A8A8A"
+                  value={draft}
+                  onChangeText={setDraft}
                   multiline={true}
                 />
               </View>
 
               <CardContainer
                 activeOpacity={0.7}
+                onPress={sendDraft}
                 customStyles={styles.sendButton(AppTheme)}>
                 <Image source={Images.sendIcon} style={styles.sendIcon} />
               </CardContainer>
@@ -220,25 +192,27 @@ const styles = StyleSheet.create<any>({
     marginBottom: SD.hp(15),
   },
   bubbleLeftWrapper: {
-    width: '75%',
+    maxWidth: SD.wp(270),
     backgroundColor: '#f3f3f3',
     paddingVertical: SD.hp(5),
     paddingHorizontal: SD.wp(20),
     borderBottomLeftRadius: 0,
   },
   bubbleRightWrapper: (AppTheme: any) => ({
-    width: '75%',
+    maxWidth: SD.wp(270),
     backgroundColor: AppTheme.Primary,
     paddingVertical: SD.hp(5),
     paddingHorizontal: SD.wp(20),
     borderBottomRightRadius: 0,
   }),
   bubbleLeftText: (AppTheme: any) => ({
+    flexShrink: 1,
     color: AppTheme.PrimaryTextColor,
     fontSize: SD.customFontSize(14),
     fontFamily: ENFonts['Medium'],
   }),
   bubbleRightText: {
+    flexShrink: 1,
     color: '#fff',
     fontSize: SD.customFontSize(14),
     fontFamily: ENFonts['Medium'],
@@ -246,7 +220,7 @@ const styles = StyleSheet.create<any>({
   timeContainer: {
     justifyContent: 'center',
     alignItems: 'center',
-    width: SD.wp(47),
+    width: SD.wp(75),
     height: SD.hp(20),
     marginBottom: SD.hp(15),
     marginTop: SD.hp(5),

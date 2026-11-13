@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {getLanguage, translate} from '../../../i18n';
 import {Alert, TouchableOpacity, View} from 'react-native';
 import {
   BottamButton,
@@ -78,7 +79,7 @@ export const SelectRoleScreen = () => {
     if (selected && selected.onPress) {
       selected.onPress(); // Perform the action of the selected role
     } else {
-      Alert.alert('Please select a role first!');
+      Alert.alert(translate('Please select a role first!', getLanguage()));
     }
   };
 

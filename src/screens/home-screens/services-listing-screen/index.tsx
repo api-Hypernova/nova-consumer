@@ -15,62 +15,62 @@ import {SD} from '../../../utils';
 const servicesData = [
   {
     id: '1',
-    title: 'Special Treatment',
+    title: 'Scalp Care',
     imageSource: Images.beardTreatment,
   },
   {
     id: '2',
-    title: 'Hair Styling',
+    title: 'Nail Art',
     imageSource: Images.services1,
   },
   {
     id: '3',
-    title: 'Massage Therapy',
+    title: 'Blowouts',
     imageSource: Images.services2,
   },
   {
     id: '4',
-    title: 'Special Treatment',
+    title: 'Hair Cut',
     imageSource: Images.services3,
   },
   {
     id: '5',
-    title: 'Hair Styling',
+    title: 'Manicure',
     imageSource: Images.services4,
   },
   {
     id: '6',
-    title: 'Massage Therapy',
+    title: 'Shampoo & Style',
     imageSource: Images.services5,
   },
   {
     id: '7',
-    title: 'Special Treatment',
+    title: 'Gel Nails',
     imageSource: Images.services6,
   },
   {
     id: '8',
-    title: 'Hair Styling',
+    title: 'Polish',
     imageSource: Images.services7,
   },
   {
     id: '9',
-    title: 'Massage Therapy',
+    title: 'Pedicure',
     imageSource: Images.services8,
   },
   {
     id: '10',
-    title: 'Specialty Treatments',
+    title: 'Colour',
     imageSource: Images.services9,
   },
   {
     id: '11',
-    title: 'Hair Styling',
+    title: 'Keratin',
     imageSource: Images.beardShave,
   },
   {
     id: '12',
-    title: 'Massage Therapy',
+    title: 'Balayage',
     imageSource: Images.faical,
   },
 ];

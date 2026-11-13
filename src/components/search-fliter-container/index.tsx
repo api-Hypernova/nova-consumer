@@ -60,6 +60,14 @@ export const SearchFliterContainer: React.FC<SearchFliterContainerProps> = ({
         {...(!editable && {onPress: onInputPress})}
       />
 
+      {editable === false && (
+        <TouchableOpacity
+          activeOpacity={1}
+          onPress={onInputPress}
+          style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: '78%'}}
+        />
+      )}
+
       <View style={[styles.filterIconContainer]}>
         <RoundIconComp
           onPress={handleFilterPress}

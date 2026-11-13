@@ -14,22 +14,22 @@ import navigationService from '../../../config/navigationService';
 import {HomeRoutes} from '../../../constants';
 
 const dates = [
-  {day: 'Sun', date: '8'},
-  {day: 'Mon', date: '9'},
-  {day: 'Tue', date: '10'},
-  {day: 'Wed', date: '11'},
-  {day: 'Thu', date: '12'},
-  {day: 'Fri', date: '13'},
-  {day: 'Sat', date: '14'},
+  {day: 'Tue', date: '17'},
+  {day: 'Wed', date: '18'},
+  {day: 'Thu', date: '19'},
+  {day: 'Fri', date: '20'},
+  {day: 'Sat', date: '21'},
+  {day: 'Sun', date: '22'},
+  {day: 'Mon', date: '23'},
 ];
 
 const timeSlots = [
   {time: '09:00 AM'},
   {time: '10:00 AM'},
   {time: '11:00 AM'},
-  {time: '13:00 PM'},
-  {time: '14:00 PM'},
-  {time: '15:00 PM'},
+  {time: '1:00 PM'},
+  {time: '2:00 PM'},
+  {time: '3:00 PM'},
 ];
 
 export const CheckOutScreen = () => {
@@ -58,7 +58,7 @@ export const CheckOutScreen = () => {
             marginTop: SD.hp(45),
           }}>
           <Text size={14} medium>
-            Choose Day . October 2024
+            Choose Day . November 2026
           </Text>
 
           <CheckoutDateCard

@@ -1,4 +1,5 @@
 import {Alert, StyleSheet, View} from 'react-native';
+import {getLanguage, translate} from '../../../i18n';
 import React, {useState} from 'react';
 import {AuthHeader, OtpInput} from '../../../components';
 import {AuthRoutes} from '../../../constants';
@@ -20,7 +21,7 @@ export const VerificationOtp = () => {
         if (code.length === 0) {
           navigationService.navigate(AuthRoutes['NewPassword']);
         } else {
-          Alert.alert('Please enter a valid OTP');
+          Alert.alert(translate('Please enter a valid OTP', getLanguage()));
         }
       }}
       backheaderProps={{

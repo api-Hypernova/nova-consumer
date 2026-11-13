@@ -65,6 +65,12 @@ export const SearchScreen = () => {
             console.log('View All');
           }}
         />
+        {['Balayage near me', 'Gel manicure', 'Barber open now', 'Keratin treatment'].map(t => (
+          <TouchableOpacity key={t} activeOpacity={0.7} onPress={() => setSearch(t)} style={{flexDirection: 'row', alignItems: 'center', paddingVertical: SD.hp(12)}}>
+            <Image source={Images.search} style={{width: SD.wp(18), height: SD.hp(18), tintColor: AppTheme.SecondaryGrayTextColor}} />
+            <Text leftSpacing={12} size={15} medium>{t}</Text>
+          </TouchableOpacity>
+        ))}
       </MainContainer>
 
       <FilterModal

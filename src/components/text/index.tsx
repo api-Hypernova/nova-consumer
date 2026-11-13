@@ -1,5 +1,6 @@
 import React, {ReactNode} from 'react';
-import {Text as RNText, StyleSheet, TextProps, TextStyle} from 'react-native';
+import {StyleSheet, TextProps, TextStyle} from 'react-native';
+import {TText as RNText} from '../../i18n';
 import {useTheme} from '../../hooks';
 import {FontWeight, Fonts, ThemeColors} from '../../styles';
 import {FontSize, SD} from '../../utils';

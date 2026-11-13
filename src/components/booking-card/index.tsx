@@ -19,11 +19,11 @@ type BookingCardProps = {
   onRideButtonPress?: () => void;
 };
 
-const data = [
-  {label: 'Date', value: 'Nov-23-2024'},
-  {label: 'Time', value: '12 : 24 AM'},
-  {label: 'Payment', value: '$744.00'},
-];
+const DETAILS: any = {
+  'Atelier Lumen': ['Sep-18-2026', '10 : 30 AM', '$65.00'],
+  'Maison Verre': ['Aug-29-2026', '2 : 00 PM', '$48.00'],
+  'Orchid & Oak': ['Sep-04-2026', '4 : 15 PM', '$112.00'],
+};
 
 export const BookingCard: React.FC<BookingCardProps> = ({
   salonName,
@@ -35,6 +35,12 @@ export const BookingCard: React.FC<BookingCardProps> = ({
   onRideButtonPress,
 }) => {
   const {AppTheme} = useTheme();
+  const d = DETAILS[salonName] || ['Sep-18-2026', '10 : 30 AM', '$65.00'];
+  const data = [
+    {label: 'Date', value: isReorder ? d[0] : d[0].replace('Sep-18', 'Nov-14').replace('Aug-29', 'Nov-21').replace('Sep-04', 'Dec-05')},
+    {label: 'Time', value: d[1]},
+    {label: 'Payment', value: d[2]},
+  ];
 
   return (
     <CardContainer
@@ -131,7 +137,7 @@ export const BookingCard: React.FC<BookingCardProps> = ({
               source={Images.uberIcon}
             />
             <Text leftSpacing={12} size={13} bold color={AppTheme.Base}>
-              Get a ride
+              Get directions
             </Text>
           </View>
 
@@ -140,7 +146,7 @@ export const BookingCard: React.FC<BookingCardProps> = ({
               3 mins Away
             </Text>
             <Text size={12} bold color={AppTheme.Base}>
-              $8 - 10 in uberX
+              By car - 8 min
             </Text>
           </View>
         </CardContainer>

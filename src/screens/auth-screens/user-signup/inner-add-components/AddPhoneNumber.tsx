@@ -1,4 +1,5 @@
-import {Platform, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {Platform, StyleSheet, TouchableOpacity, View} from 'react-native';
+import {TText as Text} from '../../../../i18n';
 import React from 'react';
 import {ComponentToRenderTypes} from '../UserSignupTypes';
 import {

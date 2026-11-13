@@ -1,15 +1,5 @@
-import {
-  Animated,
-  FlatList,
-  ImageBackground,
-  ImageProps,
-  NativeScrollEvent,
-  NativeSyntheticEvent,
-  StatusBar,
-  StyleSheet,
-  TextInput,
-  View,
-} from 'react-native';
+import {Animated, FlatList, ImageBackground, ImageProps, NativeScrollEvent, NativeSyntheticEvent, StatusBar, StyleSheet, View} from 'react-native';
+import {TTextInput as TextInput} from '../../../i18n';
 import React, {useCallback, useMemo, useRef, useState} from 'react';
 import {
   BottamButton,
@@ -63,39 +53,39 @@ const packageData: SerivcesData[] = [
 const StaffListing = [
   {
     id: '1',
-    title: 'Nathan Alexander',
+    title: 'Theo Marlowe',
     subtitle:
-      'Amazing!  The room is good than the picture. Thanks for amazing experience!',
+      'Best cut I have had in years.',
     source: Images.chatIcon,
     rating: '4.5',
   },
   {
     id: '2',
-    title: 'Jenny Winkles',
+    title: 'Priya Okafor',
     subtitle:
-      'The service is on point, and I really like the facilities. Good job!',
+      'Lovely, calm studio and friendly team.',
     source: Images.chatIcon,
     rating: '4.2',
   },
   {
     id: '3',
-    title: 'Sarah Burress',
+    title: 'Sofia Reyes',
     subtitle:
-      'The service is on point, and I really like the facilities. Good job!',
+      'Lovely, calm studio and friendly team.',
     source: Images.chatIcon2,
     rating: '4.5',
   },
   {
     id: '4',
-    title: 'Mike Thompson',
+    title: 'Daniel Park',
     subtitle:
-      'The service is on point, and I really like the facilities. Good job!',
+      'Lovely, calm studio and friendly team.',
     source: Images.chatIcon3,
     rating: '4.5',
   },
   {
     id: '5',
-    title: 'Annabel Rohan',
+    title: 'Annabel Roth',
     subtitle: 'Hair Stylist',
     source: Images.chatIcon4,
     rating: '4.5',
@@ -119,42 +109,20 @@ const dataByTab = {
 };
 
 const profileCarddata = [
-  {id: '1', title: 'Jack', subTitle: 'Owner', icon: Images.nethamImg},
+  {id: '1', title: 'Theo', subTitle: 'Senior Stylist', icon: Images.nethamImg},
 ];
 
 const businessData = [
   {id: '1', name: '9:00 am - 8:00 pm', image: Images.timer},
-  {id: '2', name: '+1 234 567890', image: Images.tablet},
+  {id: '2', name: '+1 555 0142', image: Images.tablet},
   {id: '3', name: 'In-Store & Home Service', image: Images.shop},
-  {id: '4', name: 'Shop 101, Hamilton Courts', image: Images.location},
+  {id: '4', name: '214 Larkspur Ave', image: Images.location},
 ];
 
 const RecommendationDetails = [
-  {
-    id: '1',
-    imageSource: Images.waxImg,
-    title: 'Jack Salon',
-    subtitle: 'You are one step closer on the journey to your dream body.',
-    amount: '$150',
-    time: '45 min',
-  },
-  {
-    id: '2',
-    imageSource: Images.unsplash2,
-    title: 'Luxe Hair Studio',
-    subtitle:
-      'Transform your hair into a masterpiece with our expert stylists.',
-    amount: '$150',
-    time: '45 min',
-  },
-  {
-    id: '3',
-    imageSource: Images.unsplash3,
-    title: 'Glow Spa',
-    subtitle: 'Relax and rejuvenate with our premium spa treatments.',
-    amount: '$150',
-    time: '45 min',
-  },
+  {id: '1', imageSource: Images.hairCut, title: 'Signature Cut & Style', subtitle: 'Consultation, wash, precision cut and blow-dry.', amount: '$65', time: '45 min'},
+  {id: '2', imageSource: Images.unsplash3, title: 'Gloss Treatment', subtitle: 'Shine-boosting gloss with a scalp massage.', amount: '$40', time: '30 min'},
+  {id: '3', imageSource: Images.faical, title: 'Gel Manicure', subtitle: 'Shape, cuticle care and a long-wear gel finish.', amount: '$25', time: '20 min'},
 ];
 
 export const ProceedToCheckout = () => {
@@ -246,17 +214,17 @@ export const ProceedToCheckout = () => {
         </View>
         <View style={styles.businessInfo}>
           <Text bold size={24}>
-            Woodlands Hills Salon
+            Atelier Lumen
           </Text>
           <View style={[styles.flexRow, {marginTop: SD.hp(5)}]}>
             <Text regular size={14}>
-              {`Keira throughway`}
+              {`214 Larkspur Ave`}
             </Text>
             <Text bold size={14}>
               {` • `}
             </Text>
             <Text regular size={14}>
-              {`5.0 Kms`}
+              {`1.3 km`}
             </Text>
           </View>
         </View>
@@ -267,10 +235,10 @@ export const ProceedToCheckout = () => {
               width: '70%',
             }}>
             <Text bold size={14}>
-              {'October 8, 2024'}
+              {'Thursday, November 19, 2026'}
             </Text>
             <Text topSpacing={7} semiBold size={12}>
-              {'9:00am'}
+              {'10:00 AM'}
             </Text>
           </View>
           {/* <RoundIconComp
@@ -307,7 +275,7 @@ export const ProceedToCheckout = () => {
               backgroundColor: AppTheme.BgColor2,
             },
           ]}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          Please keep the layers soft around the face. Thank you!
         </CustomInput>
       </View>
     </View>
@@ -417,7 +385,7 @@ export const ProceedToCheckout = () => {
         />
 
         <BottamButton
-          amount="$ 39.00"
+          amount="$ 143.40"
           isBottomBtn={false}
           custombuttonContainerStyle={{
             paddingHorizontal: SD.wp(25),

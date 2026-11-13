@@ -1,11 +1,5 @@
-import {
-  AppState,
-  FlatList,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
+import {AppState, FlatList, ScrollView, StyleSheet, View} from 'react-native';
+import {TText as Text} from '../../../../i18n';
 import React, {useState} from 'react';
 import {ComponentToRenderTypes} from '../UserSignupTypes';
 import {
@@ -48,7 +42,7 @@ const RecommendationDetails = [
   {
     id: '3',
     imageSource: Images.unsplash3,
-    title: 'Glow Spa',
+    title: 'Maison Verre',
     subtitle: 'Relax and rejuvenate with our premium spa treatments.',
     amount: '$150',
     time: '45 min',

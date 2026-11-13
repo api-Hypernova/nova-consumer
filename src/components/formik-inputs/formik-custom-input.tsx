@@ -1,18 +1,7 @@
 import {useField} from 'formik';
 import React, {FC, Ref, useState} from 'react';
-import {
-  Image,
-  ImageProps,
-  Platform,
-  TextInput as RNTextInput,
-  StyleSheet,
-  TextInput,
-  TextInputProps,
-  TouchableOpacity,
-  View,
-  ViewProps,
-  ViewStyle,
-} from 'react-native';
+import {Image, ImageProps, Platform, StyleSheet, TextInputProps, TouchableOpacity, View, ViewProps, ViewStyle} from 'react-native';
+import {TTextInput as RNTextInput, TTextInput as TextInput} from '../../i18n';
 import {useTheme} from '../../hooks';
 import {SD} from '../../utils';
 import Text from '../text';

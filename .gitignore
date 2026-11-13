@@ -4,3 +4,7 @@ dist/
 *.tsbuildinfo
 .env
 .env.local
+
+# local run logs / scratch
+*.log
+qr.png

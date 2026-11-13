@@ -16,43 +16,43 @@ import navigationService from '../../../config/navigationService';
 const StaffListing = [
   {
     id: '1',
-    title: 'Nathan Alexander',
+    title: "Atelier Lumen",
     subtitle:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'See you Friday at 2:30 PM! Please arrive five minutes early.',
     source: Images.chatIcon,
     counter: '1',
-    time: '19:40',
+    time: '14:05',
   },
   {
     id: '2',
-    title: 'Jenny Winkles',
+    title: "Maison Verre",
     subtitle:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'Your gloss treatment is confirmed. Anything we should know?',
     source: Images.chatIcon,
     counter: '1',
-    time: '19:40',
+    time: '13:52',
   },
   {
     id: '3',
-    title: 'Sarah Burress',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    title: "Orchid & Oak",
+    subtitle: 'Thanks for booking with us. See you soon!',
     source: Images.chatIcon2,
-    time: '19:40',
+    time: 'Yesterday',
   },
   {
     id: '4',
-    title: 'Mike Thompson',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,',
+    title: "The Gentlemen's Room",
+    subtitle: 'We have a Saturday opening if you would like it.',
     source: Images.chatIcon3,
-    time: '19:40',
+    time: 'Yesterday',
   },
   {
     id: '5',
-    title: 'Annabel Rohan',
+    title: "Studio Nine",
     subtitle:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'Thanks for visiting! We would love your review.',
     source: Images.chatIcon4,
-    time: '19:40',
+    time: 'Mon',
   },
 ];
 
